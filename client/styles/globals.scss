@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(20, 16, 24);
+    color: white;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.fadeIn{
+    animation: fadeIn 2.75s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
