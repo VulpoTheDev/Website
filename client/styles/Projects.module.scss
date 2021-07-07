@@ -1,6 +1,10 @@
 .project {
     text-align: center;
-    margin: 20px;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     h3{
         font-size: 25px;
     }
@@ -14,5 +18,9 @@
         height: 150px;
         background-color: black;
         border: solid 5px black
+    }
+    i{
+        font-size: 35px;
+        color: black
     }
 }

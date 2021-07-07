@@ -1,4 +1,12 @@
 .container {
+    .socials {
+        a {
+            color: white;
+            font-size: 40px;
+            margin: 0 10px;
+        }
+        margin-top: 10px
+    }
     margin: 150px;
     .heading {
         margin: 10px 150px;
@@ -19,8 +27,9 @@
     section {
         .projects {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
+
         background-color: rgb(99, 38, 160);
         margin-top: 80px;
         padding: 20px;
@@ -34,6 +43,42 @@
             margin: 20px;
             p {
                 margin: 0;
+            }
+        }
+
+        .furdevs {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-direction: row;
+            font-size: 18px;
+            ul {
+                li {
+                    margin: 10px 0;
+                    font-size: 15px;
+                }
+            }
+            div {
+                margin: 25px;
+            }
+            color: white;
+            a {
+                color: plum;
+            }
+        }
+
+        .stats {
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            align-items: center;
+            div {
+                margin: 15px;
+                display: flex;
+                justify-content: center;
+                img {
+                    margin: 0 10px;
+                }
             }
         }
     }
