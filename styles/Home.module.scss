@@ -1,84 +1,102 @@
-.container {
+.heading {
+    padding: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(24, 24, 24);
+    justify-content: space-between;
+    h1 {
+        font-weight: 900;
+    }
+    p {
+        font-size: 20px;
+        margin: 0 15px;
+    }
+    .icon {
+        border-radius: 50%;
+        width: 350px;
+        height: 350px;
+        border: solid 10px white;
+    }
     .socials {
         a {
             color: white;
             font-size: 40px;
             margin: 0 10px;
         }
-        margin-top: 10px
+        margin-top: 10px;
     }
-    margin: 150px;
-    .heading {
-        margin: 10px 150px;
-        text-align: center;
+    .buttons {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        div {
-            .icon {
-                border-radius: 50%;
-                width: 250px;
-                height: 250px;
-                border: solid 5px black;
+        justify-content: space-around;
+        button {
+            border: none;
+            padding: 15px 10px;
+            margin: 10px 0;
+            font-size: 18px;
+            background-color: rgb(138, 0, 202);
+            color: white;
+            &:hover {
+                background-color: rgb(107, 0, 156);
             }
         }
     }
-    section {
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
+}
+.section {
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
-        background-color: rgb(99, 38, 160);
-        margin-top: 80px;
-        padding: 20px;
-        color: white;
+    background-color: rgb(99, 38, 160);
+    margin-top: 80px;
+    padding: 20px;
+    color: white;
+    p {
+        margin: 10px 25px;
+    }
+    border-radius: 15px;
+    .project {
+        text-align: center;
+        margin: 20px;
         p {
-            margin: 10px 25px;
+            margin: 0;
         }
-        border-radius: 15px;
-        .project {
-            text-align: center;
-            margin: 20px;
-            p {
-                margin: 0;
+    }
+
+    .furdevs {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        flex-direction: row;
+        font-size: 18px;
+        ul {
+            li {
+                margin: 10px 0;
+                font-size: 15px;
             }
         }
+        div {
+            margin: 25px;
+        }
+        color: white;
+        a {
+            color: plum;
+        }
+    }
 
-        .furdevs {
+    .stats {
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        align-items: center;
+        div {
+            margin: 15px;
             display: flex;
-            justify-content: space-around;
-            text-align: center;
-            flex-direction: row;
-            font-size: 18px;
-            ul {
-                li {
-                    margin: 10px 0;
-                    font-size: 15px;
-                }
-            }
-            div {
-                margin: 25px;
-            }
-            color: white;
-            a {
-                color: plum;
-            }
-        }
-
-        .stats {
             justify-content: center;
-            text-align: center;
-            padding: 20px;
-            align-items: center;
-            div {
-                margin: 15px;
-                display: flex;
-                justify-content: center;
-                img {
-                    margin: 0 10px;
-                }
+            img {
+                margin: 0 10px;
             }
         }
     }

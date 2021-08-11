@@ -7,7 +7,7 @@ export default function Layout({ children }): ReactElement {
             <Head>
                 <title>Vulpo</title>
             </Head>
-            <div className={"container"}>{children}</div>
+            <div>{children}</div>
         </>
     );
 }
