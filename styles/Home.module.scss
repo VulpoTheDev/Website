@@ -33,12 +33,15 @@
         button {
             border: none;
             padding: 15px 10px;
-            margin: 10px 0;
+            border-radius: 25px;
+            margin: 15px;
             font-size: 18px;
-            background-color: rgb(138, 0, 202);
-            color: white;
+            background-color: transparent;
+            border: solid 2px rgb(138, 0, 202);
+            color: rgb(174, 0, 255);
             &:hover {
-                background-color: rgb(107, 0, 156);
+                background-color: rgb(174, 0, 255);
+                color: white;
             }
         }
     }
@@ -46,10 +49,9 @@
 .section {
     .projects {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-
-    background-color: rgb(99, 38, 160);
+    font-size: larger;
     margin-top: 80px;
     padding: 20px;
     color: white;
@@ -59,7 +61,7 @@
     border-radius: 15px;
     .project {
         text-align: center;
-        margin: 20px;
+        margin: 10px;
         p {
             margin: 0;
         }
@@ -68,7 +70,7 @@
     .furdevs {
         display: flex;
         justify-content: space-around;
-        text-align: center;
+        text-align: left;
         flex-direction: row;
         font-size: 18px;
         ul {
