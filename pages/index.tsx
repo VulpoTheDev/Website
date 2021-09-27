@@ -42,41 +42,22 @@ export default function Home() {
                             description={"Furry RPG Game"}
                             imageURL={"/images/Question.png"}
                             projectName={"FluffRPG"}
-                            status={"Planning"}
+                            status={"Hold"}
                             projectLink={[]}
                         />
                         <Project
                             description={"Tinder but for finding friends"}
                             imageURL={"/images/Question.png"}
                             projectName={"Find a friend"}
-                            status={"Planning"}
+                            status={"Hold"}
                             projectLink={[]}
                         />
                         <Project
                             description={"Don't ask just trust the flow"}
                             imageURL={"/images/Question.png"}
                             projectName={"BMM Tracker"}
-                            status={"Planning"}
+                            status={"Hold"}
                             projectLink={[]}
-                        />
-                        <Project
-                            description={"Furry Chat Client"}
-                            imageURL={"/images/Question.png"}
-                            projectName={"Furbook"}
-                            status={"Planning"}
-                            projectLink={[]}
-                        />
-                        <Project
-                            description={"General Purpose Discord Bot"}
-                            imageURL={"/images/Hozol.png"}
-                            projectName={"Hozol"}
-                            status={"Hold/Support Updates Only"}
-                            projectLink={[
-                                {
-                                    url: "https://github.com/VulpoTheDev/Hozol",
-                                    icon: "fab fa-github",
-                                },
-                            ]}
                         />
                         <Project
                             description={"Discord Bot For FurDevs"}
@@ -90,18 +71,6 @@ export default function Home() {
                                 },
                             ]}
                         />
-                        {/* <Project
-                            description={"A place where you can Hire Freelancers or Become one"}
-                            imageURL={"/images/Question.png"}
-                            projectName={"Freelance Zone"}
-                            status={"Hold"}
-                        />
-                        <Project
-                            description={"A Gradebook where you can manage students Grade, Make reports and more!"}
-                            imageURL={"/images/Question.png"}
-                            projectName={"Gradeflow"}
-                            status={"Hold"}
-                        /> */}
                     </div>
                 </section>
                 <section className={styles.section}>
