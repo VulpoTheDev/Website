@@ -8,14 +8,18 @@ export default function About() {
       <h1>About Me</h1>
       <div>
         <p>
-          Hello there, i{"'"}m Vulpo (or Renzo), I{"'"}m a Furry and Developer
-          that enjoys making Websites and Discord Bots. I expressed interst in
-          programming in 2017 and learned how to program in 2018 starting with
-          Javascript after being inspired by one of my friends online named
-          LostNuke, I made a whole bunch of Discord Bots and Website for my own
-          communities for others. During the pandemic I continued enhancing my
-          skills in Web Design and Web Development learning React, Next.js,
-          SCSS, and more.
+          Hello there, i{"'"}m Vulpo (or Renzo).
+          <ul className={styles.list}>
+            <li>I{"'"}m a Full Time Furry Developer that enjoys developing.</li>
+            <li>
+              I was inspired online by LostNuke to begin my Development path
+            </li>
+            <li>In 2018 I begin my Developer Journey starting with JS</li>
+            <li>
+              During the pandemic I continued to enhance my skills in
+              programming
+            </li>
+          </ul>
         </p>
       </div>
       <div>
