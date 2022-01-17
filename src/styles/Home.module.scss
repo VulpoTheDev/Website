@@ -143,6 +143,11 @@
       display: flex;
       align-items: center;
       flex-direction: row;
+        @media (max-width: 900px) {
+          iframe {
+            display: none;
+          }
+        }
       .furDevsInfo {
         h3 {
           margin: 35px 0 10px 0;
