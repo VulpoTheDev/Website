@@ -6,6 +6,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+
     .heading {
       display: flex;
       flex-direction: column;
@@ -72,6 +73,9 @@
     text-align: center;
     p {
       margin: 0 250px;
+      @media only screen and (max-width: 1040px) {
+        margin: 0 29px;
+      }
     }
     .projects {
       display: flex;
@@ -143,11 +147,11 @@
       display: flex;
       align-items: center;
       flex-direction: row;
-        @media (max-width: 900px) {
-          iframe {
-            display: none;
-          }
+      @media (max-width: 900px) {
+        iframe {
+          display: none;
         }
+      }
       .furDevsInfo {
         h3 {
           margin: 35px 0 10px 0;

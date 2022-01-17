@@ -37,4 +37,8 @@
     border: black 6px solid;
     background-color: rgb(247, 20, 255);
   }
+
+  @media only screen and (max-width: 1040px) {
+    margin: 20px;
+  }
 }
