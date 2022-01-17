@@ -169,7 +169,7 @@ const Home: NextPage = () => {
               src="https://canary.discord.com/widget?id=731520035717251142&theme=dark"
               width="350"
               height="500"
-              allowtransparency={true}
+              allowTransparency={true}
               frameBorder="0"
               sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
             ></iframe>
