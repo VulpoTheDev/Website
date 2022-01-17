@@ -17,6 +17,18 @@ class MyDocument extends Document {
                 crossOrigin="anonymous"
                 referrerPolicy="no-referrer"
               />
+              <meta content="VulpoTheDev" property="og:title" />
+              <meta
+                content="Website that showcases my Projects, Experiences, Comissions and all about me"
+                property="og:description"
+              />
+              <meta content="https://vulpo.xyz" property="og:url" />
+              <meta content="/images/vulpo.png" property="og:image" />
+              <meta
+                content="#ff00dd"
+                data-react-helmet="true"
+                name="theme-color"
+              />
             </Head>
             <body>
               <Main />
