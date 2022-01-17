@@ -11,9 +11,9 @@ export default function Navbar() {
       <div className={styles.items}>
         <ul>
           <Item name="Home" href="/" />
-          <Item name="Projects" href="/projects" />
-          <Item name="About Me" href="/about" />
-          <Item name="Fursonas" href="/fursonas" />
+          <Item name="Projects" href="/" />
+          <Item name="About Me" href="/" />
+          <Item name="Blog" href="/" />
         </ul>
         <button>Contact Me</button>
       </div>

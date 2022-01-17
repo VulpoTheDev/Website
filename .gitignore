@@ -32,6 +32,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+.env
 
 # typescript
 *.tsbuildinfo
+RenzoBot/node_modules/
+RenzoBot/config.ts

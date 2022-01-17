@@ -1,4 +1,5 @@
 .home {
+  font-size: 20px;
   .hero {
     display: flex;
     margin: 50px auto;
@@ -9,6 +10,7 @@
       display: flex;
       flex-direction: column;
       h1 {
+        margin: 15px 0;
         text-align: center;
       }
       p {
@@ -29,13 +31,23 @@
           border: none;
           margin: 15px;
           padding: 10px 15px;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.2);
+          }
         }
       }
       .icons {
+        margin: 15px 0;
         a {
           color: white;
-          margin: 0 5px;
           font-size: 42px;
+          transition: all 0.5s ease;
+          margin: 15px;
+          &:hover {
+            transform: scale(1.2);
+            color: rgb(255, 0, 221);
+          }
         }
       }
     }
@@ -53,12 +65,135 @@
       }
     }
   }
+
+  .aboutMe {
+    padding: 100px 0;
+    font-weight: 700;
+    text-align: center;
+    p {
+      margin: 0 250px;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      margin: 50px 0;
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+    margin: 50px 0;
+  }
+
+  .contactMe {
+    form {
+      margin: 25px 0;
+      display: flex;
+      flex-direction: column;
+      input {
+        margin: 10px 0;
+        border: none;
+        font-size: 16px;
+        outline: rgb(255, 0, 221) solid 2px;
+        font-weight: 700;
+        padding: 10px;
+      }
+      textarea {
+        margin: 10px 0;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: rgb(255, 0, 221) solid 2px;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 10px;
+      }
+      button {
+        background-color: rgb(255, 0, 221);
+        color: white;
+        font-weight: 600;
+        border-radius: 25px;
+        align-self: flex-end;
+        font-size: 16px;
+        border: none;
+        margin: 15px;
+        padding: 10px 45px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+  .furDevs {
+    .furDevsContainer {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      .furDevsInfo {
+        h3 {
+          margin: 35px 0 10px 0;
+        }
+      }
+      button {
+        background-color: rgb(255, 0, 221);
+        color: white;
+        font-weight: 600;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        border: none;
+        margin: 55px 0;
+        padding: 10px 45px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
   .footer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    overflow-x: auto;
+    width: 100%;
+    left: 0;
+    padding: 10px 25px;
     color: white;
     text-align: center;
     a {
       color: rgb(255, 0, 200);
       font-weight: 600;
+    }
+    .icons {
+      a {
+        color: white;
+        font-size: 20px;
+        transition: all 0.5s ease;
+        margin: 15px;
+        &:hover {
+          transform: scale(1.2);
+          color: rgb(255, 0, 221);
+        }
+      }
     }
   }
 }

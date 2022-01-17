@@ -1,0 +1,13 @@
+.skill {
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+  span {
+    font-size: 64px;
+    width: 64px;
+  }
+
+  .skillInfo {
+    margin: 0 0 0 65px;
+  }
+}
