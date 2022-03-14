@@ -4,11 +4,11 @@ import { ISkillsProps } from "./Skills";
 
 export const projects: IProjectProps[] = [
   {
-    title: "Hozol",
+    title: "Puroto",
     description:
-      "Hozol is a General Purpose Discord Bot that aims to help you out manage your community with ease while being powerful with a lot of features out of the box",
-    image: "images/hozol.png",
-    github: "https://github.com/VulpoTheDev/Hozol",
+      "Puruto is a Furry Social Media Platform. This is a place where you can find new friends, chat and more! Currently it's work in progress",
+    image: "images/puroto.png",
+    github: "https://github.com/PurotoApp",
   },
   {
     title: "FurDevs Discord Bot",
@@ -54,20 +54,26 @@ export const services: IServiceProps[] = [
     icon: "fas fa-globe",
     price: "Starting price at $120",
     description:
-      "I can make a website for you. Please Email me (vulpothedev@gmail.com) if you're interested in this service for your business or other uses.",
+      "I can make a website for you. Please email me (vulpothedev@gmail.com) for a quote.",
   },
   {
     service: "Discord Bots",
     icon: "fas fa-robot",
-    price: "Starting price at $70",
+    price: "Starting price at $45",
     description:
-      "I can make an high quality discord bot for your discord server. If you're interested please email me (vulpothedev@gmail.com).",
+      "I can make an high quality discord bot. Please email me (vulpothedev@gmail.com) for a quote.",
   },
   {
     service: "Web Design",
     icon: "fas fa-paint-brush",
     price: "Starting price at $50",
     description:
-      "I can design you a website for your business or other uses. If you're interested please email me (vulpothedev@gmail.com).",
+      "I can design you a website for your business or other uses. Please email me (vulpothedev@gmail.com) for a quote.",
+  },
+  {
+    service: "Minecraft Bot/Plugin",
+    icon: "null",
+    price: "Mystery Price at $????",
+    description: "This will be something I will be working on in the future.",
   },
 ];
