@@ -29,7 +29,7 @@ export default function Home() {
                 <section className={styles.section}>
                     <h2>Who am I?</h2>
                     <p>
-                        I{"'"}m a quirky fruity otter cunt >W<
+                        I{"'"}m a quirky fruity otter cunt
                     </p>
                 </section>
                 <section className={styles.section}>
