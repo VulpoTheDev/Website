@@ -29,10 +29,7 @@ export default function Home() {
                 <section className={styles.section}>
                     <h2>Who am I?</h2>
                     <p>
-                        I{"'"}m a High School Student, that is 16 years old that
-                        {"'"}s a Full Stack Web Developer that likes to make Websites and Discord Bots. Dreaming in
-                        becoming a Software Engineer one day at a Big Company like <strong>Google</strong>,{" "}
-                        <strong>Microsoft</strong>, or even <strong>Discord</strong>{" "}
+                        I{"'"}m a quirky fruity otter cunt >W<
                     </p>
                 </section>
                 <section className={styles.section}>
