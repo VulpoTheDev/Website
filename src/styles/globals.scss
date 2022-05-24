@@ -1,0 +1,21 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Inter:400,700');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $foregroundColor;
+  background-color: $backgroundColor;
+}
+
+.container {
+  max-width: 1325px;
+  margin: 0 auto;
+}
