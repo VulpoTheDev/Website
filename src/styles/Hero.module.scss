@@ -1,9 +1,11 @@
+@import "variables";
+
 .hero {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding: 30px 0;
+  padding: 79px 0;
   .greetings {
     flex-basis: 45%;
     .headingText {
@@ -18,9 +20,13 @@
         flex-direction: row;
         align-items: center;
         margin-top: 20px;
+        cursor: pointer;
         // God please forgive me for this
-        * {
+        svg {
             margin-right: 26px;
+            &:hover {
+                color: $primaryColor;
+            }
         }
     }
     .buttons {

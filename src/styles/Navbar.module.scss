@@ -1,3 +1,5 @@
+@import "variables";
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -30,6 +32,9 @@
         transition: all 0.3s ease;
         margin: 0 20px;
         cursor: pointer;
+        &:hover {
+          color: $primaryColor;
+        }
       }
     }
     button {

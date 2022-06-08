@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Button from '../components/Button/Button'
 import Blog from '../components/Home/Blog'
 import Hero from '../components/Home/Hero'
+import Working from '../components/Home/Working'
 import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
     <div>
       <Hero />
       <Blog />
+      <Working />
     </div>
   )
 }
