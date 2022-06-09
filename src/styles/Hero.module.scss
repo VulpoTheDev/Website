@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: space-around;
   padding: 79px 0;
+
   .greetings {
     flex-basis: 45%;
     .headingText {
@@ -51,6 +52,24 @@
     }
     100% {
       opacity: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .hero {
+    text-align: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    .greetings {
+      .icons {
+        justify-content: center;
+        font-size: 1em;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
     }
   }
 }

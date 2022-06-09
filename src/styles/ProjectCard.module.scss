@@ -17,7 +17,7 @@
     flex-direction: row;
     align-items: center;
     .information {
-        width: 100%;
+      width: 100%;
       .projectTop {
         display: flex;
         justify-content: space-between;
@@ -76,5 +76,65 @@
   &:hover {
     box-shadow: 0px 0px 10px 5px $primaryColor;
     transform: scale(1.01);
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .project {
+    width: 100vw;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    .buttons {
+      background-color: #181818;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      button {
+        padding: 7px 10px;
+        font-size: 1.12em;
+        border-radius: 7px;
+        margin: 20px 0;
+        border: none;
+        background-color: $primaryColor;
+        color: $foregroundColor;
+        i {
+          font-size: 1.3em;
+        }
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 0px 0px 10px 0px $primaryColor;
+          transform: scale(1.1);
+        }
+      }
+    }
+    img {
+      width: 100%;
+      background-color: white;
+    }
+    &:hover {
+      box-shadow: 0px 0px 10px 5px $primaryColor;
+      transform: scale(1.01);
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .project {
+    .buttons {
+      flex-direction: column;
+      button {
+        margin: 5px 0;
+        width: 100%
+      }
+    }
   }
 }
