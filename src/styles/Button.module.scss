@@ -1,0 +1,21 @@
+@import "variables";
+
+.button {
+  button {
+    padding: 12px 20px;
+    width: 150px;
+    border: none;
+    border-radius: 7px;
+    background-color: $primaryColor;
+    color: $foregroundColor;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0px 0px 10px 0px $primaryColor;
+        transform: scale(1.1);
+    }
+  }
+}
