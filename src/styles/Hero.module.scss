@@ -13,21 +13,21 @@
     }
     .headingSub {
       font-size: 1.6rem;
-      color: #878686
+      color: #878686;
     }
     .icons {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 20px;
-        cursor: pointer;
-        // God please forgive me for this
-        svg {
-            margin-right: 26px;
-            &:hover {
-                color: $primaryColor;
-            }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 20px;
+      cursor: pointer;
+      // God please forgive me for this
+      svg {
+        margin-right: 26px;
+        &:hover {
+          color: $primaryColor;
         }
+      }
     }
     .buttons {
       padding: 20px 0;
@@ -41,5 +41,16 @@
   .image {
     width: 35%;
     height: 35%;
+    transition: all 0.3s ease;
+    animation: fadeIn 3s;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }

@@ -11,7 +11,7 @@ interface IPost {
 export default function Post({ title, link, image, description }: IPost) {
   return (
     //  Makes a card showing the image with
-    <div className={styles.blogPost} style={{ backgroundImage: `url("${image}")` }}>
+    <div className={styles.blogPost} style={{ backgroundImage: `url("${image}")` }} onClick={() => alert("Coming Soon:tm:")}>
       {/* <img src={} alt={description} /> */}
       <div className={styles.information}>
         <h3>{title}</h3>

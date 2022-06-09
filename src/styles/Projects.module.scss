@@ -1,0 +1,12 @@
+.projects {
+  h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+  .projectsList{ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

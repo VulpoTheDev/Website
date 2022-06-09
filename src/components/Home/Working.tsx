@@ -2,18 +2,21 @@ import React from "react";
 import Works from "./Works";
 import styles from "../../styles/Working.module.scss";
 import { works } from "../../utils/constant";
+import Container from "../Layout/Container";
 
 type Props = {};
 
 export default function Working({}: Props) {
   return (
-    <div className={styles.working}>
-      <h2 style={{ textAlign: "center" }}>Who I Work with?</h2>
-      <div className={styles.marquee}>
-        <Workings />
-        <Workings />
+    <Container>
+      <div className={styles.working}>
+        <h2 style={{ textAlign: "center" }}>Who I Work with?</h2>
+        <div className={styles.marquee}>
+          <Workings />
+          <Workings />
+        </div>
       </div>
-    </div>
+    </Container>
   );
 }
 
