@@ -1,10 +1,13 @@
 # Ozzy Website
+
 ![Preview of the design of the website](public/images/banner.png)
 
 ## Information about the website
+
 This is the **Third** Major version of my personal website. In this website there will be a brand new design that's better than v2 and v1 with thanks to the tips and advices from my good friend [Jaker](https://github.com/jakewazhere) for designing
 
 ## What's new in this major version
+
 - 🧾 Blog (FINALLY)
 - 🎨 New Design
 - 🖼️ Place for all my Artworks
@@ -24,6 +27,7 @@ yarn dev
 ```
 
 ## Tech Stack
-- Next.js 
+
+- Next.js
 - Typescript
 - SCSS
