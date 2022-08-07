@@ -53,6 +53,12 @@ export const works: IWorkProps[] = [
     workName: "Puroto",
     workTitle: "Front Lead Developer",
   },
+  {
+    workDuration: "2022-Present",
+    workLogo: "/images/works/anthroimperium.png",
+    workName: "Anthro Imperium",
+    workTitle: "Bot Developer",
+  }
 ];
 
 export const projects: IProjectCardProps[] = [
