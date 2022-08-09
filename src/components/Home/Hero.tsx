@@ -9,6 +9,7 @@ import {
   faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
 import Container from "../Layout/Container";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -31,11 +32,16 @@ export default function Hero() {
             <Button onClick={() => alert("SOON")} text="Learn More" />
           </div>
         </div>
-        <img
-          src={`/images/hero/${Math.floor(Math.random() * 4) + 1}.png`}
-          alt=""
-          className={styles.image}
-        />
+        <div className={styles.heroImgWrapper}>
+          <Image
+            src={`/images/hero/${Math.floor(Math.random() * 4) + 1}.png`}
+            alt=""
+            className={styles.image}
+						layout="fill"
+						objectFit="contain"
+						priority
+          />
+        </div>
       </div>
     </Container>
   );

@@ -18,6 +18,7 @@
     align-items: center;
     .information {
       width: 100%;
+
       .projectTop {
         display: flex;
         justify-content: space-between;
@@ -71,12 +72,18 @@
   }
   img {
     width: 100%;
-    background-color: white;
+    background-color: transparent;
   }
   &:hover {
     box-shadow: 0px 0px 10px 5px $primaryColor;
     transform: scale(1.01);
   }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
 }
 
 @media only screen and (max-width: 780px) {
@@ -87,7 +94,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
     .buttons {
       background-color: #181818;
       width: 100%;
@@ -118,7 +125,7 @@
     }
     img {
       width: 100%;
-      background-color: white;
+      background-color: transparent;
     }
     &:hover {
       box-shadow: 0px 0px 10px 5px $primaryColor;
@@ -133,7 +140,7 @@
       flex-direction: column;
       button {
         margin: 5px 0;
-        width: 100%
+        width: 100%;
       }
     }
   }
