@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import styles from "../../styles/ProjectCard.module.scss";
 
@@ -42,16 +43,31 @@ export default function ProjectCard({
           <p>{description}</p>
         </div>
       </div>
-      <img src={image} alt={projectName} />
+      <div className={styles.imageWrapper}>
+        <Image
+          src={image}
+          alt={projectName}
+          layout="fill"
+          objectFit="contain"
+          loading="lazy"
+        />
+      </div>
       <div className={styles.buttons}>
-        <a target="_blank" href={github} rel="noopener noreferrer">
-          <button>
-            <i className="devicon-github-original" />
-          </button>
-        </a>
-        <a target="_blank" href={link ? link : github} rel="noopener noreferrer">
+        <Link href={github} target="_blank" rel="noopener noreferrer" passHref>
+          <a>
+            <button>
+              <i className="devicon-github-original" />
+            </button>
+          </a>
+        </Link>
+        <Link
+          href={link ? link : github}
+          target="_blank"
+          rel="noopener noreferrer"
+          passHref
+        >
           <button>View Project</button>
-        </a>
+        </Link>
         <button onClick={() => alert("Sorry got too lazy")}>Learn more</button>
       </div>
     </div>

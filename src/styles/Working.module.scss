@@ -30,6 +30,13 @@
   }
 }
 
+.imageWrapper {
+	display: block;
+  position: relative;
+  height: 150px;
+	transform: scale(0.9);
+}
+
 @keyframes marquee {
   0% {
     transform: translate3d(0, 0, 0);

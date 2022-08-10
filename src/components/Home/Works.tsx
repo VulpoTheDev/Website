@@ -1,5 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 import React from 'react'
+import Image from 'next/image';
+import styles from "../../styles/Working.module.scss";
 
 interface IProps {
     workName: string;
@@ -12,7 +13,9 @@ export default function Works({ workDuration, workLogo, workName, workTitle } : 
   return (
     <div>
         <h3>{workName}</h3>
-        <img src={workLogo} alt={`${workName}'s Logo`} />
+				<div className={styles.imageWrapper}>
+        <Image src={workLogo} alt={`${workName}'s Logo`} layout="fill" objectFit="contain" loading="lazy" />
+				</div>
         <h4>{workTitle}</h4>
         <p>{workDuration}</p>
     </div>
