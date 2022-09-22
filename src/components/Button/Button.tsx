@@ -4,14 +4,15 @@ interface IButtonProps {
   onClick?: () => void;
   text: string;
   link?: string;
+  type?: "submit" | "button";
 }
 
-export default function Button({ onClick, text, link }: IButtonProps) {
+export default function Button({ onClick, text, link, type }: IButtonProps) {
   return (
     <div className={styles.button}>
       {link ? (
         <a href={link}>
-          <button>{text}</button>
+          <button type={type}>{text}</button>
         </a>
       ) : (
         <button onClick={onClick}>{text}</button>

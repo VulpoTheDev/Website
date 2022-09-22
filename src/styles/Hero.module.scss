@@ -24,7 +24,8 @@
       cursor: pointer;
       // God please forgive me for this
       svg {
-        margin-right: 26px;
+        margin-right: 30px;
+        width: 55px;
         &:hover {
           color: $primaryColor;
         }
