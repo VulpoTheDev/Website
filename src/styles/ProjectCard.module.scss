@@ -3,12 +3,14 @@
 .project {
   background-color: #181818;
   width: 400px;
+  height: 400px;
   margin: 50px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   transition: all 0.3s ease;
+
   .projectHeader {
     background-color: #181818;
     padding: 1.5rem;
@@ -16,20 +18,24 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
     .information {
       width: 100%;
 
       .projectTop {
         display: flex;
         justify-content: space-between;
+
         .projectTitle {
           font-size: 1.5rem;
           font-weight: bold;
           margin-bottom: 0.5rem;
         }
+
         .technologies {
           display: flex;
           font-size: 2em;
+
           i {
             margin: 0 0.5rem;
           }
@@ -42,6 +48,7 @@
       }
     }
   }
+
   .buttons {
     background-color: #181818;
     width: 100%;
@@ -49,6 +56,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+
     button {
       padding: 7px 10px;
       font-size: 1.12em;
@@ -57,23 +65,28 @@
       border: none;
       background-color: $primaryColor;
       color: $foregroundColor;
+
       i {
         font-size: 1.3em;
       }
+
       font-weight: 700;
       text-transform: uppercase;
       transition: all 0.3s ease;
       cursor: pointer;
+
       &:hover {
         box-shadow: 0px 0px 10px 0px $primaryColor;
         transform: scale(1.1);
       }
     }
   }
+
   img {
     width: 100%;
     background-color: transparent;
   }
+
   &:hover {
     box-shadow: 0px 0px 10px 5px $primaryColor;
     transform: scale(1.01);
@@ -102,6 +115,7 @@
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
+
       button {
         padding: 7px 10px;
         font-size: 1.12em;
@@ -110,23 +124,28 @@
         border: none;
         background-color: $primaryColor;
         color: $foregroundColor;
+
         i {
           font-size: 1.3em;
         }
+
         font-weight: 700;
         text-transform: uppercase;
         transition: all 0.3s ease;
         cursor: pointer;
+
         &:hover {
           box-shadow: 0px 0px 10px 0px $primaryColor;
           transform: scale(1.1);
         }
       }
     }
+
     img {
       width: 100%;
       background-color: transparent;
     }
+
     &:hover {
       box-shadow: 0px 0px 10px 5px $primaryColor;
       transform: scale(1.01);
@@ -138,6 +157,7 @@
   .project {
     .buttons {
       flex-direction: column;
+
       button {
         margin: 5px 0;
         width: 100%;

@@ -1,4 +1,3 @@
-import { uploadImage } from "./../../../utils/uploader";
 import { randomUUID } from "crypto";
 import { NextApiRequest, NextApiResponse } from "next";
 import connectDB from "../../../middleware/mongodb";
@@ -9,14 +8,14 @@ interface Data {}
 async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   // Get the data from the request body
   const { title, content, banner } = req.body;
-  const reference = await uploadImage(banner);
-
+  
+  
   const blogID = randomUUID();
   // Create a new blog post
   await BlogPost.create({
     title,
     content,
-    banner: reference,
+    banner: "https://picsum.photos/1920/1080",
     blogID,
     date: Date.now(),
   });

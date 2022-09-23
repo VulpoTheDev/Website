@@ -6,7 +6,8 @@ export default function Blog() {
   return (
     <Container>
       <div className={styles.blog}>
-        <h2>My Blog</h2>
+        <h2>Recent Blog</h2>
+        {/* TODO: Grab 3 Recent Blogs */}
         <div className={styles.posts}>
           <Post
             description="I don't have a summer with a lot going on, but I have a plan to work through it."
