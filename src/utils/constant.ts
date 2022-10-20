@@ -6,6 +6,12 @@ export const works: IWorkProps[] = [
     workTitle: "Web/Bot Developer",
   },
   {
+    workDuration: "2022-Present",
+    workLogo: "/images/works/sparrow.png",
+    workName: "Project Sparrow",
+    workTitle: "Project Lead/Web Dev",
+  },
+  {
     workDuration: "2021-Present",
     workLogo: "/images/works/clubfloof.png",
     workName: "Club Floof",
@@ -95,13 +101,13 @@ export const recentProjects: IProjectCardProps[] = [
     github: "https://github.com/VulpoTheDev/Website"
   },
   {
-    projectName: "Puroto",
+    projectName: "Project Sparrow",
     description: "Social Media app for furries!",
-    image: "/images/puroto.png",
-    link: "https://puroto.net",
-    technologies: ["typescript-plain", "nuxtjs-plain", "go-plain"],
+    image: "/images/sparrow.png",
+    link: "https://www.youtube.com/watch?v=E4WlUXrJgy4",
+    technologies: ["typescript-plain", "nextjs-plain", "go-plain"],
     type: "Website",
-    github: "https://github.com/PurotoApp"
+    github: "https://www.youtube.com/watch?v=E4WlUXrJgy4"
   },
 ];
 
