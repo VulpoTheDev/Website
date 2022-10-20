@@ -37,7 +37,7 @@ export default function Projects() {
 								{
 									console.log(project)
 								}
-								return <ProjectCard github={project.date.toString()} technologies={[]} type={"Website"}
+								return <ProjectCard key={projects.indexOf(project)} github={project.date.toString()} technologies={[]} type={"Website"}
 																		description={project.content.slice(0, 20)} image={project.banner}
 																		link={`/projects/${project.blogID}`} projectName={project.title}  />
 							})
