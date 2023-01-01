@@ -1,0 +1,24 @@
+  .mySkills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5rem;
+    .ozzyImg {
+      width: 25%;
+      height: fit-content;
+      // margin: auto;
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      .ozzyImg {
+        width: 50%;
+        height: fit-content;
+        margin: auto;
+      }
+      img{ 
+        width: 100%;
+        height: 100px;
+      }
+    }
+  }

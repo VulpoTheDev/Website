@@ -1,24 +1,27 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import Button from '../components/Button/Button'
-import Blog from '../components/Home/Blog'
-import Footer from '../components/Home/Footer'
-import Hero from '../components/Home/Hero'
-import Projects from '../components/Home/Projects'
-import Working from '../components/Home/Working'
-import styles from '../styles/Home.module.scss'
+import Head from "next/head";
+import { useEffect, useState } from "react";
+import About from "../components/Home/AboutMe/About";
+import Hero from "../components/Home/Hero/Hero";
+import Projects from "../components/Home/Projects/projects";
+import SkillsSection from "../components/Home/Skills/Skills";
+import Footer from "../components/Layout/Footer";
+import Layout from "../components/Layout/Layout";
+import Navbar from "../components/Layout/Navbar";
+import Project from "../components/Project/Project";
+import { projects as projectsList } from "../config/projects";
+import config from "../config/skills.json";
+import styles from "../styles/Home.module.scss";
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
-    <div>
+    <div className={styles.home}>
       <Hero />
-      <Blog />
-      <Working />
-      <Projects />
+      <Layout>
+        <About />
+        <SkillsSection />
+        <Projects />
+      </Layout>
       <Footer />
     </div>
-  )
+  );
 }
-
-export default Home

@@ -1,35 +1,21 @@
-import Link from "next/link";
-import Button from "../Button/Button";
-import styles from "../../styles/Navbar.module.scss"
-import Container from "./Container";
+import React from "react";
+import styles from "./Navbar.module.scss";
 
 export default function Navbar() {
   return (
-    <Container>
-      <nav className={styles.navbar}>
-        <div>
-          <Link href="/" passHref>
-            <h1>OzzyTheDev</h1>
-          </Link>
-        </div>
-        <div>
+      <div className={styles.navbar}>
+        <div className={styles.links}>
+          <h1 className={styles.brand}>OzzyTheDev</h1>
           <ul>
-            <Link href="/">
-              <li>Home</li>
-            </Link>
-            <Link href="/blogs">
-              <li>Blog</li>
-            </Link>
-            <Link href="/projects">
-              <li>Projects</li>
-            </Link>
-            <Link href="/artworks">
-              <li>Artworks</li>
-            </Link>
+            <li>Home</li>
+            <li>Blog</li>
+            <li>Projects</li>
+            <li>Fursonas</li>
           </ul>
-          <Button link="mailto:vulpothedev@gmail.com" text="Contact" />
         </div>
-      </nav>
-    </Container>
+        <div className={styles.button}>
+          <button>Contact</button>
+        </div>
+      </div>
   );
 }
