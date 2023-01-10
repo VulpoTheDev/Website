@@ -1,5 +1,5 @@
 # Ozzy Website
-![Preview of the design of the website](public/images/website.png)
+![Preview of the design of the website](/app/public/images/website.png)
 
 ## Tech Stack
 ![alt](https://skillicons.dev/icons?i=react,typescript,scss,next,express,graphql)
