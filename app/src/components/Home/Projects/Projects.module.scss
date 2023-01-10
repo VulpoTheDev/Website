@@ -1,0 +1,21 @@
+.projectSection {
+  margin: 5rem 0;
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+  }
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 750px) {
+      grid-template-columns: 1fr;
+
+    }
+  }
+}

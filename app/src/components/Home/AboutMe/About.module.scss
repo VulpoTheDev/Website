@@ -1,0 +1,19 @@
+.aboutMe {
+  margin-bottom: 5rem;
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 2rem;
+    h2 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}

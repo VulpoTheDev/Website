@@ -1,0 +1,85 @@
+@import "../../styles/colors";
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+
+  .brand {
+    margin-right: 3rem;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      color: $primary-color;
+      text-shadow: 0 0 1px $primary-color;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      li {
+        list-style: none;
+        margin-right: 3rem;
+        font-size: 1rem;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          cursor: pointer;
+          color: $primary-color;
+          text-shadow: 0 0 1px $primary-color;
+        }
+      }
+    }
+  }
+
+  .button {
+    display: flex;
+    flex-direction: row;
+    button {
+      border-radius: 5px;
+      padding: 10px 30px;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      color: $font-color;
+      background-color: $primary-color;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 10px $primary-color;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    
+    .links {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: left;
+      ul {
+        flex-direction: row;
+        li {
+          margin-right: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .button {
+      display: none;
+    }
+  }
+}
