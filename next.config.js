@@ -1,13 +1,8 @@
-const removeImports = require('next-remove-imports')();
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-	swcMinify: true,
-	compress: true
+    images: {
+        domains: ['localhost', 'cdn.sanity.io'],
+    }
 }
 
-module.exports = removeImports({
-	...nextConfig,
-});
-
+module.exports = nextConfig
