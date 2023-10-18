@@ -32,7 +32,7 @@ export default async function Projects() {
               title={project.title}
               description={project.description}
               languages={project.languages}
-              banner={imageUrlBuilder(client).image(project.banner).url()}
+              banner={project.banner ? imageUrlBuilder(client).image(project.banner).url() : null}
             />
           ))}
         </div>

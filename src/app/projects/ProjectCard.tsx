@@ -37,7 +37,7 @@ export default function ProjectCard({
               />
           </div>
         ) : (
-          <div className="bg-gray-300 h-48 text-white text-3xl text-center py-20">
+          <div className="bg-pink-300 h-48 text-white text-3xl text-center py-20">
             {title}
           </div>
         )}
