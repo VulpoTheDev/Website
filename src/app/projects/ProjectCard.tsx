@@ -21,8 +21,8 @@ export default function ProjectCard({
 }) {
   const router = useRouter();
   return (
-    <div className="border border-pink-500 rounded-lg overflow-hidden shadow-md group transition-all ease-in-out">
-      <div className="group-hover:bg-pink-500">
+    <div className="border border-gray-500 rounded-lg overflow-hidden shadow-md group transition-all ease-in-out">
+      <div className="group-hover:bg-gray-500">
         {banner ? (
           <div className="relative w-full h-48 ">
             <Image
@@ -37,7 +37,7 @@ export default function ProjectCard({
               />
           </div>
         ) : (
-          <div className="bg-pink-300 h-48 text-white text-3xl text-center py-20">
+          <div className="bg-gray-300 h-48 text-white text-3xl text-center py-20">
             {title}
           </div>
         )}
@@ -50,7 +50,7 @@ export default function ProjectCard({
             {languages.map((language, index) => (
               <span
                 key={index}
-                className="px-2 py-1 bg-pink-500 text-white font-bold rounded-lg text-sm"
+                className="px-2 py-1 bg-gray-700 text-white font-bold rounded-lg text-sm"
               >
                 {language}
               </span>
@@ -60,8 +60,8 @@ export default function ProjectCard({
         {github || website && (
 
         <div className="flex flex-row">
-          {github && (<button className="bg-pink-500 hover:scale-105 hover:bg-400 transition-all ease-in-out" onClick={() => router.push(github)}>GitHub</button>)}
-          {website && (<button className="bg-pink-500 hover:scale-105 hover:bg-400 transition-all ease-in-out" onClick={() => router.push(website)}>Website</button>)}
+          {github && (<button className="bg-gray-700 hover:scale-105 hover:bg-400 transition-all ease-in-out" onClick={() => router.push(github)}>GitHub</button>)}
+          {website && (<button className="bg-gray-700 hover:scale-105 hover:bg-400 transition-all ease-in-out" onClick={() => router.push(website)}>Website</button>)}
         </div>
         )}
 

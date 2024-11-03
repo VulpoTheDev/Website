@@ -1,24 +1,38 @@
-/* eslint-disable @next/next/no-async-client-component */
+// page.tsx
 'use client'
-
 import { useRouter } from "next/navigation";
 import BlogCard from "./BlogCard";
 import { client } from "../../../sanity/lib/client";
-import imageUrlBuilder from "@sanity/image-url";
+import { urlFor } from "../../../sanity/lib/image";
 
-const getBlogs = async (): Promise<{
+interface BlogPost {
   title: string;
   summary: string;
-  tags: string[];
+  categories: string[];
   banner?: string;
-}[]> => {
-  const blogPosts = await client.fetch(`*[_type == "post"]`, {})
-  return blogPosts
+  slug: string;
 }
 
+// page.tsx (Blogs component)
+const getBlogs = async (): Promise<BlogPost[]> => {
+  const blogPosts = await client.fetch(`*[_type == "post"] {
+    title,
+    summary,
+    "categories": categories[]->title,
+    "banner": mainImage,
+    "slug": slug.current
+  }`);
+
+  return blogPosts.map((post: any) => ({
+    ...post,
+    banner: post.banner ? urlFor(post.banner) : undefined
+  }));
+};
+
 export default async function Blogs() {
-  const router = useRouter()
-  const blogPosts = await getBlogs()
+  const router = useRouter();
+  const blogPosts = await getBlogs();
+
   return (
     <main className="w-11/12 mx-auto py-4">
       <h1 className="text-3xl font-semibold mb-4">Blog</h1>
@@ -26,15 +40,17 @@ export default async function Blogs() {
         {blogPosts.map((post, index) => (
           <BlogCard
             key={index}
-            tags={post.tags}
             title={post.title}
             summary={post.summary}
-            banner={imageUrlBuilder(client).image(post.banner!).url()}
+            tags={post.categories}
+            banner={post.banner}
+            slug={post.slug}
           />
         ))}
       </div>
-      <button  onClick={() => router.push("/")} className="bg-pink-500 px-5 py-3">Head back home</button>
-
+      <button onClick={() => router.push("/")} className="bg-pink-500 px-5 py-3">
+        Head back home
+      </button>
     </main>
   );
 }

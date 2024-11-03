@@ -1,14 +1,19 @@
+'use client'
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
-export default function BlogCard({ title, summary, tags, banner }: {
+export default function BlogCard({ title, summary, tags, banner, slug }: {
   title: string;
   summary: string;
   tags: string[];
   banner?: string;
+  slug: string
 }) {
+  const router = useRouter()
   return (
-    <div className="border rounded-lg overflow-hidden shadow-md group transition-all ease-in-out">
+    <div className="border rounded-lg overflow-hidden shadow-md group transition-all ease-in-out" onClick={() => router.push(`/blogs/${slug}`)}>
       <div className="group-hover:bg-pink-500">
         {banner ? (
           <div className="relative w-full h-48">
@@ -30,7 +35,7 @@ export default function BlogCard({ title, summary, tags, banner }: {
           <h2 className="text-xl font-semibold mb-2">{title}</h2>
           <p className="text-gray-400 group-hover:text-white mb-2">{summary}</p>
           <div className="flex space-x-2">
-            {tags.map((tag, index) => (
+            {tags && tags.map((tag, index) => (
               <span
                 key={index}
                 className="px-2 py-1 bg-pink-500 text-white font-bold rounded-lg text-sm"
