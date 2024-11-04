@@ -41,29 +41,23 @@ export default defineType({
       options: {
         hotspot: true,
       },
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative Text',
-        }
-      ]
-    }),
-    defineField({
-      name: 'languages',
-      title: 'Languages',
-      type: 'array',
-      of: [{type: 'string' }],
     }),
     defineField({
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
     }),
-    defineField({
-      name: 'body',
+    defineField(    {
+      name: 'markdownBody',
       title: 'Body',
-      type: 'blockContent',
+      type: 'markdown',
+      description: 'A GitHub-flavored markdown field with image uploading',
     }),
+    {
+      name: 'languages',
+      title: 'Languages',
+      type: 'array',
+      of: [{type: 'string' }],
+    }
   ]
 })

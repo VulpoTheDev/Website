@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['localhost', 'cdn.sanity.io'],
+        remotePatterns: [{
+            hostname: 'localhost'
+        }, {
+            hostname: 'cdn.sanity.io'
+        }, {
+            hostname: "skillicons.dev"
+        }],
     }
 }
 

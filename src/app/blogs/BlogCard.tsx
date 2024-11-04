@@ -1,44 +1,57 @@
-import Image from "next/image";
-import React from "react";
+'use client';
 
-export default function BlogCard({ title, summary, tags, banner }: {
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import imageUrlBuilder from "@sanity/image-url";
+import { client } from "../../../sanity/lib/client";
+import React from "react";
+import { urlFor } from "../../../sanity/lib/image";
+
+export default function BlogCard({
+  title,
+  summary,
+  tags,
+  banner,
+  slug
+}: {
   title: string;
   summary: string;
   tags: string[];
-  banner?: string;
+  banner?: any;
+  slug: string;
 }) {
+  const router = useRouter();
+
   return (
-    <div className="border rounded-lg overflow-hidden shadow-md group transition-all ease-in-out">
-      <div className="group-hover:bg-pink-500">
-        {banner ? (
-          <div className="relative w-full h-48">
-            <Image
-              src={banner}
-              alt={title}
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "cover"
-              }} />
-          </div>
-        ) : (
-          <div className="bg-gray-300 h-48 text-white text-3xl text-center py-20">
-            {title}
-          </div>
-        )}
-        <div className="p-4">
-          <h2 className="text-xl font-semibold mb-2">{title}</h2>
-          <p className="text-gray-400 group-hover:text-white mb-2">{summary}</p>
-          <div className="flex space-x-2">
-            {tags.map((tag, index) => (
+    <div
+      className="relative border border-gray-800 rounded-lg overflow-hidden shadow-lg group transition-all ease-in-out cursor-pointer hover:shadow-xl"
+      onClick={() => router.push(`/blogs/${slug}`)}
+    >
+      <div className="relative h-48 w-full">
+        <Image
+          src={banner ? urlFor(banner) : '/placeholder.png'}
+          alt={title}
+          fill
+          className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+        />
+      </div>
+      <div className="p-6 bg-black group-hover:bg-gray-800 transition-colors ease-in-out">
+        <h2 className="text-2xl font-semibold mb-3 text-white group-hover:text-white transition-colors ease-in-out">
+          {title}
+        </h2>
+        <p className="text-gray-500 group-hover:text-gray-200 mb-4 transition-colors ease-in-out">
+          {summary}
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {tags &&
+            tags.map((tag, index) => (
               <span
                 key={index}
-                className="px-2 py-1 bg-pink-500 text-white font-bold rounded-lg text-sm"
+                className="px-2 py-1 bg-gray-700 text-white font-bold rounded-lg text-xs sm:text-sm"
               >
                 {tag}
               </span>
             ))}
-          </div>
         </div>
       </div>
     </div>

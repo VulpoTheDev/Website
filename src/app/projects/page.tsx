@@ -1,10 +1,10 @@
-/* eslint-disable @next/next/no-async-client-component */
-"use client";
+'use client';
 
 import { useRouter } from "next/navigation";
 import ProjectCard from "./ProjectCard";
 import { client } from "../../../sanity/lib/client";
 import imageUrlBuilder from "@sanity/image-url";
+import Button from "../components/Button";
 
 const getProjects = async (): Promise<
   {
@@ -22,9 +22,16 @@ export default async function Projects() {
   const router = useRouter();
   const projects = await getProjects();
   return (
-    <div className="w-11/12 mx-auto mt-8 ">
-      <div className="mx-auto py-4">
-        <h1 className="text-3xl font-semibold mb-4">Projects</h1>
+    <div className="w-11/12 mx-auto mt-8 text-center container">
+      <div className="mx-auto py-8">
+        <div className="flex flex-col items-center justify-center my-4 spac space-y-4 text-center pb-8">
+          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+            My Projects
+          </h1>
+          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+            A showcase of my work in software engineering and cybersecurity.
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {projects.map((project, index) => (
             <ProjectCard
@@ -37,12 +44,7 @@ export default async function Projects() {
           ))}
         </div>
       </div>
-      <button
-        onClick={() => router.push("/")}
-        className="bg-pink-500 px-5 py-3"
-      >
-        Head back home
-      </button>
+      <Button page="/" label="Head back home" />
     </div>
   );
 }

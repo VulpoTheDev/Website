@@ -1,21 +1,16 @@
-import {defineField, defineType} from 'sanity'
+import { defineType, defineField } from 'sanity';
 
 export default defineType({
   name: 'post',
-  title: 'Post',
   type: 'document',
+  title: 'Post',
   fields: [
-    defineField({
+    {
       name: 'title',
       title: 'Title',
       type: 'string',
-    }),
-    defineField({
-      name: 'summary',
-      title: 'Summary',
-      type: 'string'
-    }),
-    defineField({
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -23,8 +18,8 @@ export default defineType({
         source: 'title',
         maxLength: 96,
       },
-    }),
-    defineField({
+    },
+    {
       name: 'banner',
       title: 'Banner',
       type: 'image',
@@ -38,22 +33,23 @@ export default defineType({
           title: 'Alternative Text',
         }
       ]
-    }),
-    defineField({
+    },
+    {
       name: 'tags',
       title: 'Tags',
       type: 'array',
       of: [{type: 'string' }],
-    }),
-    defineField({
+    },
+    {
       name: 'publishedAt',
-      title: 'Published at',
+      title: 'Published At',
       type: 'datetime',
-    }),
-    defineField({
-      name: 'body',
+    },
+    {
+      name: 'markdownBody',
       title: 'Body',
-      type: 'blockContent',
-    }),
-  ]
-})
+      type: 'markdown',
+      description: 'A GitHub-flavored markdown field with image uploading',
+    },
+  ],
+});
