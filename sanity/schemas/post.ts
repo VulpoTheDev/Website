@@ -21,6 +21,21 @@ export default defineType({
       },
     },
     {
+      name: 'banner',
+      title: 'Banner',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative Text',
+        }
+      ]
+    },
+    {
       name: 'publishedAt',
       title: 'Published At',
       type: 'datetime',
