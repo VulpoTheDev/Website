@@ -60,10 +60,11 @@ export default defineType({
       title: 'Published at',
       type: 'datetime',
     }),
-    defineField({
-      name: 'body',
+    defineField(    {
+      name: 'markdownBody',  // Add the markdown field here
       title: 'Body',
-      type: 'blockContent',
+      type: 'markdown',
+      description: 'A GitHub-flavored markdown field with image uploading',
     }),
   ]
 })

@@ -2121,7 +2121,7 @@
     "@sanity/client" "^6.15.11"
     "@types/react" "^18.0.25"
 
-"@sanity/types@3.62.3":
+"@sanity/types@3.62.3", "@sanity/types@^3.62.3":
   version "3.62.3"
   resolved "https://registry.yarnpkg.com/@sanity/types/-/types-3.62.3.tgz#02e9c370130b523b5e7fb9fb5aba4f88f73e80ad"
   integrity sha512-9dXm3KCbpGezzJ50mOQbkgGb0kRS+tt5hHX9hJsBdQ7J+hYO/X4nBOqqf7VFNqYE0LNnxjrceIwKHZqAlNGRNg==
@@ -2129,7 +2129,7 @@
     "@sanity/client" "^6.22.2"
     "@types/react" "^18.3.5"
 
-"@sanity/types@^3.0.0", "@sanity/types@^3.14.5":
+"@sanity/types@^3.14.5":
   version "3.17.0"
   resolved "https://registry.yarnpkg.com/@sanity/types/-/types-3.17.0.tgz#f765a4801aba781a0899382997de3eabb9025967"
   integrity sha512-bjqsw11XKSE5jly2h3ex7NfTjIbefbfNA/W7pVqTdhPmmC+aLxLh+6sMuCzOMhwz7I2ZCsdAhxtfs+6oXZtzDQ==

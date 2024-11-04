@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-async-client-component */
-"use client";
+'use client';
 
 import { useRouter } from "next/navigation";
 import ProjectCard from "./ProjectCard";

@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { notFound } from 'next/navigation';
 import { client } from '../../../../sanity/lib/client';
