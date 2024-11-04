@@ -19,8 +19,8 @@ export default function WorkExperience({ startYear, endYear, img, name, position
         className="border border-white bg-white rounded-full object-cover"
       />
       <div className="flex flex-col">
-        <p className="text-lg font-bold text-white">{name}</p>
-        <p className="text-sm text-gray-300">{position}</p>
+        <p className="text-lg font-bold dark:text-white">{name}</p>
+        <p className="text-sm dark:text-gray-300">{position}</p>
         <span className="text-sm text-gray-500">
           {startYear} - {endYear}
         </span>

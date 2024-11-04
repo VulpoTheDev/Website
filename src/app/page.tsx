@@ -32,7 +32,7 @@ export default async function Home() {
             className="rounded-full border-4 border-white md:w-64 md:h-64"
           />
           <div className="mt-4 md:mt-6">
-            <h1 className="text-2xl md:text-4xl font-extrabold">Jason Diaz Jimenez</h1>
+            <h1 className="text-2xl md:text-4xl font-extrabold text-white">Jason Diaz Jimenez</h1>
             <p className="text-gray-300 text-sm md:text-xl max-w-[700px] mx-auto mt-2">
               University Student, Software Engineer & Cybersecurity Enthusiast
             </p>
@@ -62,10 +62,10 @@ export default async function Home() {
         </section>
 
         <section className="my-12 md:my-24 py-6 md:py-12 px-4 md:px-32">
-          <h2 className="text-2xl md:text-4xl font-bold text-center mb-8">
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-8 dark:text-white">
             About Me
           </h2>
-          <p className="text-base md:text-lg text-gray-300 text-center max-w-[800px] mx-auto mb-8 md:mb-12">
+          <p className="text-base md:text-lg dark:text-gray-300 text-center max-w-[800px] mx-auto mb-8 md:mb-12">
             My name is Jason Diaz Jimenez. I'm a student at Western Governor University
             pursuing a Bachelors Degree in Software Engineering and a Masters Degree in Cybersecurity.
             I currently code websites and small applications for friends and businesses as a hobby.
@@ -77,7 +77,7 @@ export default async function Home() {
               <Skills skillsName="Design" langs={design} />
             </div>
             <div className="flex flex-col gap-6 md:gap-8 mt-8 lg:mt-0">
-              <div className="p-4 md:p-6 border border-white rounded-lg">
+              <div className="p-4 md:p-6 border dark:border-white border-gray-700 rounded-lg">
                 <h3 className="text-xl md:text-2xl font-bold text-center mb-4">Certificates</h3>
                 <div className="flex flex-wrap gap-4 justify-center w-full">
                   {certificates.map((cert, index) => (
@@ -92,7 +92,7 @@ export default async function Home() {
                   ))}
                 </div>
               </div>
-              <div className="p-4 md:p-6 border border-white rounded-lg">
+              <div className="p-4 md:p-6 border dark:border-white border-gray-700 rounded-lg">
                 <h3 className="text-xl md:text-2xl font-bold text-center mb-4">Work Experience</h3>
                 <div className="flex flex-col gap-4">
                   {workExp.map((work, index) => (
@@ -112,10 +112,10 @@ export default async function Home() {
       <footer className="w-full bg-gray-900 py-8 md:py-12 px-4 md:px-32">
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
           <div>
-            <h1 className="text-xl md:text-3xl font-bold">Jason Diaz Jimenez</h1>
+            <h1 className="text-xl md:text-3xl font-bold text-white">Jason Diaz Jimenez</h1>
             <p className="text-sm md:text-lg text-gray-400">University Student, Software Engineer & Cybersecurity</p>
           </div>
-          <div className="flex gap-4 mt-4 md:mt-0">
+          <div className="flex gap-4 mt-4 md:mt-0 text-white">
             <Social icon={<FaLinkedin size={24} />} link="https://www.linkedin.com/in/jasonydiazjimenez/" />
             <Social icon={<FaGithub size={24} />} link="https://github.com/VulpoTheDev" />
             <Social icon={<FaX size={24} />} link="http://twitter.com/JYDiazJimenez" />
