@@ -16,7 +16,7 @@ export default function Navbar() {
       </h1>
       <div className="hidden md:flex flex-row items-center gap-x-8 font-bold">
         <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
+        {/* <Link href="/about">About</Link> */}
         <Link href="/blogs">Blogs</Link>
         <Link href="/projects">Projects</Link>
         <button className="p-2 bg-slate-800 rounded px-4" onClick={() => window.open("/resume.pdf", '_blank')}>
@@ -26,9 +26,9 @@ export default function Navbar() {
       <div className="md:hidden">
         <FaBars className="text-white text-2xl cursor-pointer" onClick={() => setIsOpen(!isOpen)} />
         {isOpen && (
-          <div className="absolute right-4 top-14 bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-start gap-4 font-bold">
+          <div className="absolute right-4 top-14 bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-start gap-4 font-bol z-10">
             <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
-            <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
+            {/* <Link href="/about" onClick={() => setIsOpen(false)}>About</Link> */}
             <Link href="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link>
             <Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
             <button className="w-full p-2 bg-slate-800 rounded px-4" onClick={() => {
