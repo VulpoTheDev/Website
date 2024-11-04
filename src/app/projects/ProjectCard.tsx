@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { LuGithub, LuLink } from 'react-icons/lu';
 import React from "react";
 
 export default function ProjectCard({
@@ -12,60 +13,73 @@ export default function ProjectCard({
   github,
   website
 }: {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   languages: string[];
   banner?: any;
   github?: string;
   website?: string;
 }) {
   const router = useRouter();
+
   return (
-    <div className="border border-gray-500 rounded-lg overflow-hidden shadow-md group transition-all ease-in-out">
-      <div className="group-hover:bg-gray-500">
-        {banner ? (
-          <div className="relative w-full h-48 ">
+    <div
+      className="border border-gray-700 rounded-lg overflow-hidden shadow-md group relative transform transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col justify-between"
+    >
+      <div className="p-4 sm:p-6 flex-grow">
+        <h2 className="text-xl sm:text-2xl font-bold mb-2 text-white">{title || "No Name"}</h2>
+        <p className="text-gray-400 text-sm sm:text-base mb-4">{description}</p>
+        
+        <div>
+          {banner ? (
             <Image
               src={banner}
-              alt={title}
-              fill
-              sizes="100vw"
-              style={{
-                objectFit: "cover"
-              }} 
-              className="group-hover:scale-100 scale-105 transition-all ease-in-out "
-              />
-          </div>
-        ) : (
-          <div className="bg-gray-300 h-48 text-white text-3xl text-center py-20">
-            {title}
-          </div>
-        )}
-        <div className="p-4">
-          <h2 className="text-xl font-semibold mb-2">{title}</h2>
-          <p className="text-gray-400 group-hover:text-white mb-4">
-            {description}
-          </p>
-          <div className="flex space-x-2">
+              alt={title || "No alt"}
+              width={600}
+              height={300}
+              className="rounded-lg object-cover w-full mb-4 transform transition-transform duration-300 group-hover:scale-110"
+              style={{ height: '200px', maxHeight: '300px' }}
+            />
+          ) : (
+            <div className="bg-gray-300 h-32 sm:h-48 text-gray-700 text-lg sm:text-3xl text-center py-14 sm:py-20">
+              {title}
+            </div>
+          )}
+          <div className="flex flex-wrap gap-2 mt-4">
             {languages.map((language, index) => (
               <span
                 key={index}
-                className="px-2 py-1 bg-gray-700 text-white font-bold rounded-lg text-sm"
+                className="px-2 py-1 bg-gray-800 text-white font-bold rounded-lg text-xs sm:text-sm"
               >
                 {language}
               </span>
             ))}
           </div>
         </div>
-        {github || website && (
-
-        <div className="flex flex-row">
-          {github && (<button className="bg-gray-700 hover:scale-105 hover:bg-400 transition-all ease-in-out" onClick={() => router.push(github)}>GitHub</button>)}
-          {website && (<button className="bg-gray-700 hover:scale-105 hover:bg-400 transition-all ease-in-out" onClick={() => router.push(website)}>Website</button>)}
-        </div>
-        )}
-
       </div>
+
+      {(github || website) && (
+        <div className="flex gap-2 sm:gap-4 p-4 sm:p-6 pt-0 justify-between">
+          {github && (
+            <button
+              className="w-1/2 bg-gray-900 px-2 sm:px-4 py-2 rounded hover:bg-gray-700 transition-colors duration-300 text-white font-bold flex flex-row gap-x-2 items-center justify-center text-sm sm:text-base"
+              onClick={() => router.push(github)}
+            >
+              <LuGithub />
+              GitHub
+            </button>
+          )}
+          {website && (
+            <button
+              className="w-1/2 bg-gray-900 px-2 sm:px-4 py-2 rounded hover:bg-gray-700 transition-colors duration-300 text-white font-bold flex flex-row gap-x-2 items-center justify-center text-sm sm:text-base"
+              onClick={() => router.push(website)}
+            >
+              <LuLink />
+              Website
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 }

@@ -48,4 +48,4 @@ export const backend = [
     "go"
   ]
 
-export const design = []
+export const design = ["figma"]

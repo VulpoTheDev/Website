@@ -1,16 +1,11 @@
 {
-  "extends": ["next/core-web-vitals"],
+  "extends": [
+    "next/core-web-vitals"
+  ],
   "rules": {
-    // Ignore warnings about using <img> instead of <Image /> from next/image
     "@next/next/no-img-element": "off",
-    
-    // Ignore warnings about missing alt text in img tags
     "jsx-a11y/alt-text": "off",
-
-    // Ignore warnings about async client components
     "@next/next/no-async-client-component": "off",
-
-    // Ignore warnings about unescaped entities in JSX
     "react/no-unescaped-entities": "off"
   }
 }

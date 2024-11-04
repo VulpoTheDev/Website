@@ -1,4 +1,3 @@
-// schemas/category.js
 import { defineType, defineField } from "sanity";
 
 export default defineType({

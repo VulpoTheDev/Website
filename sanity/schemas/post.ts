@@ -1,4 +1,3 @@
-// schemas/post.js
 import { defineType, defineField } from 'sanity';
 
 export default defineType({
@@ -36,12 +35,18 @@ export default defineType({
       ]
     },
     {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{type: 'string' }],
+    },
+    {
       name: 'publishedAt',
       title: 'Published At',
       type: 'datetime',
     },
     {
-      name: 'markdownBody',  // Add the markdown field here
+      name: 'markdownBody',
       title: 'Body',
       type: 'markdown',
       description: 'A GitHub-flavored markdown field with image uploading',

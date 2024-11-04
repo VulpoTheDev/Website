@@ -68,36 +68,32 @@ export type Geopoint = {
   alt?: number;
 };
 
-export type BlockContent = Array<{
-  children?: Array<{
-    marks?: Array<string>;
-    text?: string;
-    _type: "span";
-    _key: string;
-  }>;
-  style?: "normal" | "h1" | "h2" | "h3" | "blockquote" | "code";
-  listItem?: "bullet" | "number";
-  markDefs?: Array<{
-    href?: string;
-    _type: "link";
-    _key: string;
-  }>;
-  level?: number;
-  _type: "block";
-  _key: string;
-} | {
-  asset?: {
-    _ref: string;
-    _type: "reference";
-    _weak?: boolean;
-    [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+export type Project = {
+  _id: string;
+  _type: "project";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  description?: string;
+  github?: string;
+  website?: string;
+  slug?: Slug;
+  banner?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
   };
-  hotspot?: SanityImageHotspot;
-  crop?: SanityImageCrop;
-  alt?: string;
-  _type: "image";
-  _key: string;
-}>;
+  publishedAt?: string;
+  markdownBody?: string;
+  languages?: Array<string>;
+};
 
 export type Category = {
   _id: string;
@@ -109,15 +105,15 @@ export type Category = {
   description?: string;
 };
 
-export type Author = {
+export type Post = {
   _id: string;
-  _type: "author";
+  _type: "post";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
-  name?: string;
+  title?: string;
   slug?: Slug;
-  authorImage?: {
+  banner?: {
     asset?: {
       _ref: string;
       _type: "reference";
@@ -126,26 +122,12 @@ export type Author = {
     };
     hotspot?: SanityImageHotspot;
     crop?: SanityImageCrop;
+    alt?: string;
     _type: "image";
   };
-  bio?: Array<{
-    children?: Array<{
-      marks?: Array<string>;
-      text?: string;
-      _type: "span";
-      _key: string;
-    }>;
-    style?: "normal";
-    listItem?: never;
-    markDefs?: Array<{
-      href?: string;
-      _type: "link";
-      _key: string;
-    }>;
-    level?: number;
-    _type: "block";
-    _key: string;
-  }>;
+  tags?: Array<string>;
+  publishedAt?: string;
+  markdownBody?: string;
 };
 
 export type SanityImageCrop = {
@@ -205,18 +187,6 @@ export type SanityImageMetadata = {
   isOpaque?: boolean;
 };
 
-export type Post = {
-  _id: string;
-  _type: "post";
-  _createdAt: string;
-  _updatedAt: string;
-  _rev: string;
-  title?: string;
-  slug?: Slug;
-  publishedAt?: string;
-  markdownBody?: string;
-};
-
 export type Slug = {
   _type: "slug";
   current?: string;
@@ -225,5 +195,5 @@ export type Slug = {
 
 export type Markdown = string;
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | BlockContent | Category | Author | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Post | Slug | Markdown;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityFileAsset | Geopoint | Project | Category | Post | SanityImageCrop | SanityImageHotspot | SanityImageAsset | SanityAssetSourceData | SanityImageMetadata | Slug | Markdown;
 export declare const internalGroqTypeReferenceTo: unique symbol;
