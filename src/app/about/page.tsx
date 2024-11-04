@@ -10,7 +10,7 @@ export default function About() {
   
   return (
     <div className="mx-auto mt-8 px-4 md:px-8 lg:px-16 max-w-7xl">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-8">About Me</h1>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center dark:text-white mb-8">About Me</h1>
       <main className="flex flex-col md:flex-row justify-around items-center space-y-10 md:space-y-0 md:space-x-8">
         
         {/* Text Section */}

@@ -46,7 +46,7 @@ export default function BlogPage({ params: { slug } }: BlogPostProps) {
   return (
     <main className="w-11/12 mx-auto py-4">
       <h1 className="text-3xl font-bold mb-2">{post.title || "Untitled Post"}</h1>
-      <p className="text-gray-500 mb-4">
+      <p className="t mb-4">
         {post.publishedAt
           ? new Date(post.publishedAt).toLocaleDateString("en-US", {
               year: 'numeric',
@@ -55,7 +55,7 @@ export default function BlogPage({ params: { slug } }: BlogPostProps) {
             })
           : "Unknown Date"}
       </p>
-      <article className="prose prose-invert lg:prose-xl max-w-none">
+      <article className="prose dark:prose-invert lg:prose-xl max-w-non h-full">
   <MarkdownRenderer content={post.markdownBody} />
 </article>
 

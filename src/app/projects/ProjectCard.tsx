@@ -27,8 +27,8 @@ export default function ProjectCard({
       className="border border-gray-700 rounded-lg overflow-hidden shadow-md group relative transform transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col justify-between"
     >
       <div className="p-4 sm:p-6 flex-grow">
-        <h2 className="text-xl sm:text-2xl font-bold mb-2 text-white">{title || "No Name"}</h2>
-        <p className="text-gray-400 text-sm sm:text-base mb-4">{description}</p>
+        <h2 className="text-xl sm:text-2xl font-bold mb-2 dark:text-white">{title || "No Name"}</h2>
+        <p className="dark:text-gray-400 text-sm sm:text-base mb-4">{description}</p>
         
         <div>
           {banner ? (

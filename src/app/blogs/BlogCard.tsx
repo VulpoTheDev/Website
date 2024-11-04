@@ -24,7 +24,7 @@ export default function BlogCard({
 
   return (
     <div
-      className="relative border border-gray-800 rounded-lg overflow-hidden shadow-lg group transition-all ease-in-out cursor-pointer hover:shadow-xl"
+      className="relative border dark:border-gray-800 rounded-lg overflow-hidden shadow-lg group transition-all ease-in-out cursor-pointer hover:shadow-xl"
       onClick={() => router.push(`/blogs/${slug}`)}
     >
       <div className="relative h-48 w-full">
@@ -35,8 +35,8 @@ export default function BlogCard({
           className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
         />
       </div>
-      <div className="p-6 bg-black group-hover:bg-gray-800 transition-colors ease-in-out">
-        <h2 className="text-2xl font-semibold mb-3 text-white group-hover:text-white transition-colors ease-in-out">
+      <div className="p-6 dark:bg-black dark:group-hover:bg-gray-800 transition-colors ease-in-out">
+        <h2 className="text-2xl font-semibold mb-3 dark:text-white group-hover:text-black transition-colors ease-in-out">
           {title}
         </h2>
         <p className="text-gray-500 group-hover:text-gray-200 mb-4 transition-colors ease-in-out">
