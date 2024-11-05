@@ -16,6 +16,11 @@ export default defineType({
       type: 'string'
     }),
     defineField({
+      name: "feature",
+      title: "Feature",
+      type: "boolean"
+    }),
+    defineField({
       name: 'github',
       title: 'GitHub',
       type: 'string'

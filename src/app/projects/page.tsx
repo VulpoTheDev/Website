@@ -5,6 +5,7 @@ import ProjectCard from "./ProjectCard";
 import { client } from "../../../sanity/lib/client";
 import imageUrlBuilder from "@sanity/image-url";
 import Button from "../components/Button";
+import { Project } from "../../../sanity.types";
 
 const getProjects = async (): Promise<
   {
@@ -20,7 +21,7 @@ const getProjects = async (): Promise<
 
 export default async function Projects() {
   const router = useRouter();
-  const projects = await getProjects();
+  const projects = await getProjects() as Project[];
   return (
     <div className="w-11/12 mx-auto mt-8 text-center container">
       <div className="mx-auto py-8">
@@ -38,7 +39,9 @@ export default async function Projects() {
               key={index}
               title={project.title}
               description={project.description}
-              languages={project.languages}
+              languages={project.languages || []}
+              website={project.website}
+              github={project.github}
               banner={project.banner ? imageUrlBuilder(client).image(project.banner).url() : null}
             />
           ))}

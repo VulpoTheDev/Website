@@ -29,7 +29,7 @@ export default function ProjectCard({
       <div className="p-4 sm:p-6 flex-grow">
         <h2 className="text-xl sm:text-2xl font-bold mb-2 dark:text-white">{title || "No Name"}</h2>
         <p className="dark:text-gray-400 text-sm sm:text-base mb-4">{description}</p>
-        
+
         <div>
           {banner ? (
             <Image
@@ -62,7 +62,7 @@ export default function ProjectCard({
         <div className="flex gap-2 sm:gap-4 p-4 sm:p-6 pt-0 justify-between">
           {github && (
             <button
-              className="w-1/2 bg-gray-900 px-2 sm:px-4 py-2 rounded hover:bg-gray-700 transition-colors duration-300 text-white font-bold flex flex-row gap-x-2 items-center justify-center text-sm sm:text-base"
+              className={`${website ? "w-1/2" : "w-full"} bg-gray-900 px-2 sm:px-4 py-2 rounded hover:bg-gray-700 transition-colors duration-300 text-white font-bold flex flex-row gap-x-2 items-center justify-center text-sm sm:text-base`}
               onClick={() => router.push(github)}
             >
               <LuGithub />
@@ -71,7 +71,7 @@ export default function ProjectCard({
           )}
           {website && (
             <button
-              className="w-1/2 bg-gray-900 px-2 sm:px-4 py-2 rounded hover:bg-gray-700 transition-colors duration-300 text-white font-bold flex flex-row gap-x-2 items-center justify-center text-sm sm:text-base"
+              className={`${github ? "w-1/2" : "w-full"} bg-gray-900 px-2 sm:px-4 py-2 rounded hover:bg-gray-700 transition-colors duration-300 text-white font-bold flex flex-row gap-x-2 items-center justify-center text-sm sm:text-base`}
               onClick={() => router.push(website)}
             >
               <LuLink />

@@ -13,7 +13,7 @@ import { FaX } from "react-icons/fa6";
 import { Project } from "../../sanity.types";
 
 const getProjects = async () => {
-  const projects = await client.fetch(`*[_type == "project"]`, {});
+  const projects = await client.fetch(`*[_type == "project" && feature == true]`, {});
   return projects;
 };
 
@@ -55,6 +55,8 @@ export default async function Home() {
                 title={project.title}
                 description={project.description}
                 languages={project.languages || []}
+                github={project.github}
+                website={project.website}
                 banner={project.banner ? imageUrlBuilder(client).image(project.banner).url() : null}
               />
             ))}
