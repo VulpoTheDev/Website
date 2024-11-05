@@ -36,7 +36,7 @@ export default function BlogCard({
         />
       </div>
       <div className="p-6 dark:bg-black dark:group-hover:bg-gray-800 transition-colors ease-in-out">
-        <h2 className="text-2xl font-semibold mb-3 dark:text-white group-hover:text-black transition-colors ease-in-out">
+        <h2 className="text-2xl font-semibold mb-3 dark:text-white transition-colors ease-in-out">
           {title}
         </h2>
         <p className="text-gray-500 group-hover:text-gray-200 mb-4 transition-colors ease-in-out">
