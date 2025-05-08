@@ -2,11 +2,17 @@ export const certificates: { name: string, img: string }[] = [{
     name: "CompTIA ITF+",
     img: "/certificates/comptiaitf.png"
   }, {
-    name: "CIW Javascript Specialist",
-    img: "/certificates/ciwjavascript.png"
+    name: "ITILv4 Foundations",
+    img: "/certificates/itil.png"
   }, {
-    name: "CIW Advanced HTML5 & CSS3 Specialist",
-    img: "/certificates/ciwhtml.jpg"
+    name: "WGU Frontend",
+    img: "/certificates/wgufrontend.png"
+  }, {
+    name: "WGU Backend",
+    img: "/certificates/wgubackend.png"
+  }, {
+    name: "AWS Cloud Practitioner",
+    img: "/certificates/cloudpractitioner.png"
   }]
   
 export const workExp: { name: string, img: string, startYear: string, endYear: string, position: string }[] = [{
