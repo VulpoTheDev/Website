@@ -38,7 +38,7 @@ export default async function Home() {
             </p>
             <div className="flex flex-wrap gap-4 mt-4 items-center justify-center">
               <Button page="/projects" label="View Projects" />
-              <Button href="mailto:ozzythedev@outlook.com" label="Contact Me" />
+              <Button href="mailto:hello@jasondiaz.dev" label="Contact Me" />
             </div>
           </div>
         </section>
