@@ -8,6 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        bg: 'var(--bg)',
+        surface: 'var(--surface)',
+        line: 'var(--line)',
+        ink: 'var(--ink)',
+        muted: 'var(--muted)',
+        accent: 'var(--accent)',
+        'accent-ink': 'var(--accent-ink)',
+      },
+      fontFamily: {
+        display: ['var(--font-manrope)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-source-sans)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-ibm-plex-mono)', 'ui-monospace', 'monospace'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -15,6 +29,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [ require('@tailwindcss/typography'),],
+  plugins: [require('@tailwindcss/typography')],
 }
 export default config

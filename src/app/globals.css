@@ -3,25 +3,40 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --bg: #121028;
+  --surface: #1c1838;
+  --line: #3d3560;
+  --ink: #f0f4fb;
+  --muted: #b0a8c9;
+  --accent: #9b7cf5;
+  --accent-ink: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+::selection {
+  background: color-mix(in srgb, var(--accent) 40%, transparent);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--ink);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 90% 60% at 15% -10%, rgba(155, 124, 245, 0.45), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 95% 20%, rgba(99, 102, 241, 0.35), transparent 50%),
+    radial-gradient(ellipse 60% 45% at 50% 110%, rgba(192, 132, 252, 0.22), transparent 50%),
+    radial-gradient(ellipse 40% 30% at 70% 70%, rgba(56, 189, 248, 0.08), transparent 60%),
+    linear-gradient(165deg, #1a1440 0%, #121028 45%, #0f0c22 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
