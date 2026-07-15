@@ -2,6 +2,18 @@ export const certificates: { name: string, img: string }[] = [{
     name: "CompTIA ITF+",
     img: "/certificates/comptiaitf.png"
   }, {
+    name: "CompTIA A+",
+    img: "/certificates/a.png"
+  }, {
+    name: "CompTIA Network+",
+    img: "/certificates/network.png"
+  }, {
+    name: "CompTIA Security+",
+    img: "/certificates/security.png"
+  }, {
+    name: "CompTIA CySA+",
+    img: "/certificates/cysa.png"
+  }, {
     name: "ITILv4 Foundations",
     img: "/certificates/itil.png"
   }, {

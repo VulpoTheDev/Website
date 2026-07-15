@@ -8,12 +8,12 @@ interface ISkillsProp {
 
 export default function Skills({ langs, skillsName }: ISkillsProp) {
   return (
-    <div className="my-6">
-      <h3 className="text-2xl font-bold tracking-tighter my-2">{skillsName.toUpperCase()}</h3>
-      <div className="grid grid-cols-5 md:grid-cols-10 gap-2">
+    <div>
+      <h3 className="text-xl md:text-2xl font-bold tracking-tighter mb-3">{skillsName.toUpperCase()}</h3>
+      <div className="flex flex-wrap gap-2.5">
         {langs.map((tech) => (
-          <div key={tech} className="flex items-center justify-center bg-muted rounded-lg">
-            <img src={`https://skillicons.dev/icons?i=${tech}`} alt={tech} width={60} height={60} />
+          <div key={tech} className="flex items-center justify-center rounded-lg">
+            <img src={`https://skillicons.dev/icons?i=${tech}`} alt={tech} width={48} height={48} />
           </div>
         ))}
       </div>
