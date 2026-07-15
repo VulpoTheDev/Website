@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { LuGithub, LuLink } from 'react-icons/lu';
+import { LuGithub, LuLink } from "react-icons/lu";
 import React from "react";
 
 export default function ProjectCard({
@@ -10,7 +10,7 @@ export default function ProjectCard({
   languages,
   banner,
   github,
-  website
+  website,
 }: {
   title?: string;
   description?: string;
@@ -22,34 +22,34 @@ export default function ProjectCard({
   const hasLinks = Boolean(github || website);
 
   return (
-    <div className="h-full border border-gray-700 rounded-lg overflow-hidden shadow-md group relative transform transition-transform duration-300 hover:scale-105 hover:shadow-xl flex flex-col">
-      <div className="p-4 sm:p-6 flex flex-col flex-grow">
-        <h2 className="text-xl sm:text-2xl font-bold mb-2 dark:text-white">
-          {title || "No Name"}
+    <div className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-line bg-surface shadow-md transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl">
+      <div className="flex flex-grow flex-col p-4 sm:p-6">
+        <h2 className="mb-2 font-display text-xl font-bold text-ink sm:text-2xl">
+          {title || "Untitled project"}
         </h2>
-        <p className="dark:text-gray-400 text-sm sm:text-base mb-4 line-clamp-3 min-h-[3.75rem]">
+        <p className="mb-4 min-h-[3.75rem] text-sm text-muted line-clamp-3 sm:text-base">
           {description}
         </p>
 
         {banner ? (
           <Image
             src={banner}
-            alt={title || "No alt"}
+            alt={title || "Project preview"}
             width={600}
             height={300}
-            className="rounded-lg object-cover w-full h-[200px] mb-4 transform transition-transform duration-300 group-hover:scale-105"
+            className="mb-4 h-[200px] w-full rounded-lg object-cover transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
-          <div className="bg-gray-300 h-[200px] mb-4 text-gray-700 text-lg sm:text-3xl text-center flex items-center justify-center rounded-lg">
+          <div className="mb-4 flex h-[200px] items-center justify-center rounded-lg border border-line bg-bg text-center text-lg text-muted sm:text-3xl">
             {title}
           </div>
         )}
 
-        <div className="flex flex-wrap gap-2 mt-auto">
-          {languages.map((language, index) => (
+        <div className="mt-auto flex flex-wrap gap-2">
+          {(languages ?? []).map((language, index) => (
             <span
               key={index}
-              className="px-2 py-1 bg-gray-800 text-white font-bold rounded-lg text-xs sm:text-sm"
+              className="rounded-md border border-line bg-bg px-2 py-1 text-xs font-bold text-ink sm:text-sm"
             >
               {language}
             </span>
@@ -57,10 +57,11 @@ export default function ProjectCard({
         </div>
       </div>
 
-      <div className="flex gap-2 sm:gap-4 p-4 sm:p-6 pt-0 mt-auto min-h-[3.25rem]">
+      <div className="mt-auto flex min-h-[3.25rem] gap-2 p-4 pt-0 sm:gap-4 sm:p-6 sm:pt-0">
         {github && (
           <button
-            className="flex-1 bg-gray-900 px-2 sm:px-4 py-2 rounded hover:bg-gray-700 transition-colors duration-300 text-white font-bold flex flex-row gap-x-2 items-center justify-center text-sm sm:text-base"
+            type="button"
+            className="flex flex-1 flex-row items-center justify-center gap-x-2 rounded bg-accent px-2 py-2 text-sm font-bold text-accent-ink transition-colors duration-300 hover:bg-[#8a6be8] sm:px-4 sm:text-base"
             onClick={() => window.open(github, "_blank", "noopener,noreferrer")}
           >
             <LuGithub />
@@ -69,15 +70,18 @@ export default function ProjectCard({
         )}
         {website && (
           <button
-            className="flex-1 bg-gray-900 px-2 sm:px-4 py-2 rounded hover:bg-gray-700 transition-colors duration-300 text-white font-bold flex flex-row gap-x-2 items-center justify-center text-sm sm:text-base"
-            onClick={() => window.open(website, "_blank", "noopener,noreferrer")}
+            type="button"
+            className="flex flex-1 flex-row items-center justify-center gap-x-2 rounded bg-accent px-2 py-2 text-sm font-bold text-accent-ink transition-colors duration-300 hover:bg-[#8a6be8] sm:px-4 sm:text-base"
+            onClick={() =>
+              window.open(website, "_blank", "noopener,noreferrer")
+            }
           >
             <LuLink />
             Website
           </button>
         )}
         {!hasLinks && (
-          <div className="flex-1 flex items-center justify-center rounded bg-gray-900/50 px-2 sm:px-4 py-2 text-sm sm:text-base font-bold text-gray-500">
+          <div className="flex flex-1 items-center justify-center rounded border border-accent/30 bg-accent/10 px-2 py-2 text-sm font-bold text-muted sm:px-4 sm:text-base">
             Links coming soon
           </div>
         )}
