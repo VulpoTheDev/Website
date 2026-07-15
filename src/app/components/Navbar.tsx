@@ -1,43 +1,83 @@
 'use client'
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
-  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
+  const linkClass =
+    "text-sm font-medium text-muted hover:text-ink transition-colors";
+
   return (
-    <nav className="flex items-center justify-between w-full py-3 px-4 md:px-8 bg-black text-white">
-      <h1 className="text-2xl md:text-3xl font-bold text-white cursor-pointer" onClick={() => router.push("/")}>
-        Jason Diaz Jimenez
-      </h1>
-      <div className="hidden md:flex flex-row items-center gap-x-8 font-bold">
-        <Link href="/">Home</Link>
-        {/* <Link href="/about">About</Link> */}
-        <Link href="/blogs">Blogs</Link>
-        <Link href="/projects">Projects</Link>
-        <button className="p-2 bg-slate-800 rounded px-4" onClick={() => window.open("/resume.pdf", '_blank')}>
-          Resume
+    <nav className="sticky top-0 z-50 w-full border-b border-line/80 bg-bg/85 backdrop-blur-md">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
+        <Link
+          href="/"
+          className="font-display text-lg font-bold tracking-tight text-ink md:text-xl"
+        >
+          Jason Diaz Jimenez
+        </Link>
+
+        <div className="hidden items-center gap-x-8 md:flex">
+          <Link href="/" className={linkClass}>
+            Home
+          </Link>
+          <Link href="/about" className={linkClass}>
+            About
+          </Link>
+          <Link href="/projects" className={linkClass}>
+            Projects
+          </Link>
+          <Link href="/blogs" className={linkClass}>
+            Blog
+          </Link>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded bg-accent px-4 py-2 text-sm font-bold text-accent-ink transition-opacity hover:opacity-90"
+          >
+            Resume
+          </a>
+        </div>
+
+        <button
+          type="button"
+          className="p-2 text-ink md:hidden"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
         </button>
       </div>
-      <div className="md:hidden">
-        <FaBars className="text-white text-2xl cursor-pointer" onClick={() => setIsOpen(!isOpen)} />
-        {isOpen && (
-          <div className="absolute right-4 top-14 bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-start gap-4 font-bold">
-            <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
-            {/* <Link href="/about" onClick={() => setIsOpen(false)}>About</Link> */}
-            <Link href="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link>
-            <Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
-            <button className="w-full p-2 bg-slate-800 rounded px-4" onClick={() => {
-              window.open("/resume.pdf", '_blank');
-              setIsOpen(false);
-            }}>Resume</button>
-          </div>
-        )}
-      </div>
+
+      {isOpen && (
+        <div className="flex flex-col gap-4 border-t border-line bg-surface px-4 py-4 font-medium md:hidden">
+          <Link href="/" className={linkClass} onClick={() => setIsOpen(false)}>
+            Home
+          </Link>
+          <Link href="/about" className={linkClass} onClick={() => setIsOpen(false)}>
+            About
+          </Link>
+          <Link href="/projects" className={linkClass} onClick={() => setIsOpen(false)}>
+            Projects
+          </Link>
+          <Link href="/blogs" className={linkClass} onClick={() => setIsOpen(false)}>
+            Blog
+          </Link>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded bg-accent px-4 py-2 text-center text-sm font-bold text-accent-ink"
+            onClick={() => setIsOpen(false)}
+          >
+            Resume
+          </a>
+        </div>
+      )}
     </nav>
   );
 }
