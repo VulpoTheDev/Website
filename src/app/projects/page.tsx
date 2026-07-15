@@ -1,30 +1,20 @@
-'use client';
-
-import { useRouter } from "next/navigation";
 import ProjectCard from "./ProjectCard";
 import { client } from "../../../sanity/lib/client";
 import imageUrlBuilder from "@sanity/image-url";
 import Button from "../components/Button";
+import { Project } from "../../../sanity.types";
 
-const getProjects = async (): Promise<
-  {
-    title: string;
-    description: string;
-    languages: string[];
-    banner?: any;
-  }[]
-> => {
+const getProjects = async () => {
   const projects = await client.fetch(`*[_type == "project"]`, {});
-  return projects;
+  return projects as Project[];
 };
 
 export default async function Projects() {
-  const router = useRouter();
   const projects = await getProjects();
   return (
     <div className="w-11/12 mx-auto mt-8 text-center container">
       <div className="mx-auto py-8">
-        <div className="flex flex-col items-center justify-center my-4 spac space-y-4 text-center pb-8">
+        <div className="flex flex-col items-center justify-center my-4 space-y-4 text-center pb-8">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
             My Projects
           </h1>
@@ -38,8 +28,10 @@ export default async function Projects() {
               key={index}
               title={project.title}
               description={project.description}
-              languages={project.languages}
+              languages={project.languages || []}
               banner={project.banner ? imageUrlBuilder(client).image(project.banner).url() : null}
+              github={project.github}
+              website={project.website}
             />
           ))}
         </div>

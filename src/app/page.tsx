@@ -56,6 +56,8 @@ export default async function Home() {
                 description={project.description}
                 languages={project.languages || []}
                 banner={project.banner ? imageUrlBuilder(client).image(project.banner).url() : null}
+                github={project.github}
+                website={project.website}
               />
             ))}
           </div>
