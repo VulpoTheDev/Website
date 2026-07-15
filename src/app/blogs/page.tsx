@@ -1,10 +1,14 @@
-'use client'
-import { useRouter } from "next/navigation";
 import BlogCard from "./BlogCard";
 import { client } from "../../../sanity/lib/client";
 import { urlFor } from "../../../sanity/lib/image";
 import Button from "../components/Button";
-import { FiSearch } from 'react-icons/fi'
+import { FiSearch } from "react-icons/fi";
+
+export const metadata = {
+  title: "Blog",
+  description:
+    "Thoughts, tutorials, and insights on software engineering and cybersecurity.",
+};
 
 interface BlogPost {
   title: string;
@@ -25,38 +29,44 @@ const getBlogs = async (): Promise<BlogPost[]> => {
 
   return blogPosts.map((post: any) => ({
     ...post,
-    banner: post.banner ? urlFor(post.banner) : undefined
+    banner: post.banner ? urlFor(post.banner) : undefined,
   }));
 };
 
 export default async function Blogs() {
-  const router = useRouter();
   const blogPosts = await getBlogs();
 
   return (
-    <main className="w-11/12 mx-auto py-4 container">
+    <main className="mx-auto max-w-6xl px-4 py-12 md:px-8 md:py-16">
       <div className="flex flex-col items-center justify-center space-y-4 text-center">
-        <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-          My Blog
+        <p className="font-mono text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+          Writing
+        </p>
+        <h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+          Blog
         </h1>
-        <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-          Thoughts, tutorials, and insights on software engineering and cybersecurity.
+        <p className="mx-auto max-w-2xl text-muted md:text-xl text-balance">
+          Thoughts, tutorials, and insights on software engineering and
+          cybersecurity.
         </p>
       </div>
+
       <div className="mt-8 flex justify-center">
-      <div className="relative w-full max-w-md">
-        <input
-          type="text"
-          className="w-full pl-12 pr-4 py-3 text-white placeholder-gray-400 bg-gray-900 border-2 border-gray-700 rounded-full shadow-sm focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-colors"
-          placeholder="Search blog here..."
-        />
-        <FiSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
+        <div className="relative w-full max-w-md">
+          <input
+            type="text"
+            className="w-full rounded-full border-2 border-line bg-surface py-3 pl-12 pr-4 text-ink placeholder:text-muted shadow-sm transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+            placeholder="Search blog here..."
+            aria-label="Search blog posts"
+          />
+          <FiSearch className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted" />
+        </div>
       </div>
-    </div>
-      <div className="my-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+
+      <div className="my-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {blogPosts.map((post, index) => (
           <BlogCard
-            key={index}
+            key={post.slug || index}
             title={post.title}
             summary={post.summary}
             tags={post.tags}
@@ -65,7 +75,10 @@ export default async function Blogs() {
           />
         ))}
       </div>
-      <Button label="Head back home" page="/" />
-    </main >
+
+      <div className="flex justify-center">
+        <Button label="Back to home" page="/" outline />
+      </div>
+    </main>
   );
 }
