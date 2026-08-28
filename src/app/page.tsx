@@ -47,7 +47,7 @@ export default async function Home() {
             Jason Diaz Jimenez
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-base text-muted md:text-xl text-balance">
-            Building secure software systems. B.S. in Software Engineering,
+            Building secure software systems. B.S. in Software Engineering & Cybersecurity and Information Assurance,
             Western Governors University.
           </p>
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3 md:mt-8">
@@ -95,8 +95,8 @@ export default async function Home() {
           <p className="mx-auto mb-12 max-w-2xl text-center text-base text-muted md:mb-16 md:text-lg text-balance">
             I&apos;m Jason Diaz Jimenez, a software engineer focused on full-stack
             development and security fundamentals. I hold a Bachelor&apos;s in Software
-            Engineering from Western Governors University, with CompTIA A+,
-            Network+, Security+, CySA+, and AWS Cloud Practitioner among my
+            Engineering and Cybersecurity & Information Assurance from Western Governors University, with CompTIA A+,
+            Network+, Security+, CySA+, Pentest+, and AWS Cloud Practitioner among my
             credentials. I build production-minded web applications and small
             systems for clients and personal projects.
           </p>
