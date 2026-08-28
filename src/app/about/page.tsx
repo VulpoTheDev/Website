@@ -7,7 +7,7 @@ import { certificates } from "../data";
 export const metadata = {
   title: "About",
   description:
-    "Software engineer with a B.S. in Software Engineering from Western Governors University. Stack, credentials, and focus areas.",
+    "Software engineer with a B.S. in Software Engineering & Cybersecurity and Information Assurnace from Western Governors University. Stack, credentials, and focus areas.",
 };
 
 export default function About() {
@@ -34,7 +34,7 @@ export default function About() {
               Western Governors University
             </strong>{" "}
             with a Bachelor&apos;s in Software Engineering. My credentials include
-            CompTIA A+, Network+, Security+, CySA+, ITF+, ITILv4 Foundations,
+            CompTIA A+, Network+, Security+, CySA+, Pentest+, ITF+, ITILv4 Foundations,
             WGU Front-End and Back-End Developer, and AWS Cloud Practitioner.
           </p>
 
